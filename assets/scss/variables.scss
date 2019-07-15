@@ -1,0 +1,22 @@
+$brownRoyalColor: #581503;
+$lightgoldColor: #f7edab;
+$greenFlashyColor: #67d922;
+$whiteColor: #fff;
+$blackColor: #000;
+
+$titleLevel2FontSize: 42px;
+$baseFontSize: 14px;
+
+$abrilFatfaceFont: 'Abril Fatface', cursive;
+$gothamFont: "Gotham";
+$containerWidth: 1040px;
+
+@font-face {
+    font-family: "Gotham";
+    src: url(./../fonts/GOTHAMBOOK.TTF);
+}
+@font-face {
+    font-family: "Gotham";
+    src: url(./../fonts/Gotham-Bold.otf);
+    font-weight: bold;
+}

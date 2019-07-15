@@ -1,0 +1,194 @@
+@import './variables';
+@import './mixins';
+.mega-menu {
+    background-color: #000;
+    color: #fff;
+    @include position(fixed, 0, 100px, 0, 0);
+    z-index: 99;
+    padding: 40px;
+    overflow: auto;
+    opacity: 0;
+    @include translate(0, -100%);
+    @include transition(all .3s);
+    &.open {
+        opacity: 1;
+        @include translate(0, 0%);
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    .toggle-menu__btn {
+        margin: 0 0 0 auto;
+        display: none
+    }
+    .book-button {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    .col {
+        width: 33.3333333%;
+        + .col {
+            border-left: 4px solid rgba(255, 255, 255, .2);
+        }
+    }
+    .menu-title {
+        margin-bottom: 30px;
+        h3 {
+            font: normal 42px $abrilFatfaceFont;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .desc {
+            color: #6b6b6b
+        }
+    }
+    .body {
+        margin-bottom: 30px
+    }
+    .news {
+        padding-right: 40px;
+        .body {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+                li {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 50%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    img {
+                        @include size(40px);
+                        margin-right: 10px;
+                    }
+                    a {
+                        color: #fff;
+                        display: flex;
+                    }
+                }
+            }    
+        }
+        .footer {
+            ul {
+                li {
+                    a {
+                        color: #fff;
+                        line-height: 2.14;
+                        letter-spacing: 2.8px;
+                        color: #eee;
+                        text-transform: uppercase
+                    }
+                }
+            }
+        }
+    }
+    .locations {
+        padding-right: 40px;
+        padding-left: 40px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                margin: 5px 0;
+                a {
+                    color: #eee;
+                    line-height: 2.14;
+                    letter-spacing: 2.8px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .menu-blogs {
+        padding-left: 40px;
+        .post {
+            .catname {
+                color: #6b6b6b
+            }
+            .title {
+                a {
+                    text-transform: initial;
+                    color: #fff;
+                }
+            }
+        }
+        .readmore {
+            line-height: 2.14;
+            letter-spacing: 2.8px;
+            color: #eee;
+            text-transform: uppercase;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #eee;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        &.menu-open {
+            overflow: hidden;
+            .wrapper {
+                @include translate(100%, 0);
+            }
+        }
+    }
+    .mega-menu {
+        right: 0;
+        @include size(100vw, 100vh);
+        @include translate(-100%, 0);
+        &.open {
+            @include translate(0, 0);
+        }
+        .col {
+            width: 100%;
+            flex: unset;
+            margin-bottom: 25px;
+            padding-right: 15px;
+            padding-left: 15px;
+            + .col {
+                border-left: none;
+            }
+        }
+        .toggle-menu__btn {
+            display: block
+        }
+        .book-button {
+            position: relative;
+            top: 0;
+            right: 0;
+            .btn-cta {
+                width: 100%;
+                background-color: #fff;
+                color: #000;
+                &:hover, &:focus {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+        .menu-title {
+            border-bottom: 4px solid rgba(255, 255, 255, .2);
+            padding-bottom: 10px;
+            h3 {
+                font-size: 20px;
+            }
+            .desc {
+                font-size: 12px;
+            }
+        }
+        .menu-content {
+            display: none;
+            width: 100%;
+        }
+    }
+}

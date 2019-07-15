@@ -1,0 +1,1144 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  outline: none; }
+
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/GOTHAMBOOK.TTF); }
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/Gotham-Bold.otf);
+  font-weight: bold; }
+body {
+  font-family: 'Gotham';
+  font-size: 14px;
+  line-height: 1.43; }
+
+a {
+  text-decoration: none;
+  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -o-transition: all 0.15s; }
+  a:hover, a:focus {
+    text-decoration: none; }
+
+h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.col {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.media {
+  display: block; }
+
+.wrapper {
+  padding-right: 100px;
+  padding-bottom: 97px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s; }
+
+.quick-menu {
+  width: 100px;
+  height: 100%;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px; }
+  .quick-menu .top {
+    margin-bottom: auto; }
+  .quick-menu .top > span {
+    display: block;
+    transform: rotate(90deg); }
+  .quick-menu .lang ul {
+    display: flex;
+    align-items: center;
+    transform: rotate(-90deg); }
+  .quick-menu .lang ul li a {
+    display: block;
+    padding: 21px 15px;
+    border: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.2);
+    transition: all .3s; }
+  .quick-menu .lang ul li.active a {
+    color: #fff;
+    border-color: #fff;
+    font-weight: bold; }
+
+.toggle-menu__btn {
+  display: block;
+  width: 25px;
+  height: 15px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 40px; }
+  .toggle-menu__btn span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out; }
+    .toggle-menu__btn span:nth-child(1) {
+      top: 0; }
+    .toggle-menu__btn span:nth-child(2) {
+      top: 6px; }
+    .toggle-menu__btn span:nth-child(3) {
+      top: 12px; }
+  .toggle-menu__btn.opening span:nth-child(1) {
+    top: 5px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .toggle-menu__btn.opening span:nth-child(2) {
+    opacity: 0;
+    top: -60px; }
+  .toggle-menu__btn.opening span:nth-child(3) {
+    top: 5px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+
+.btn-cta {
+  border: 4px solid #000;
+  padding: 25px 28px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 2.8px;
+  display: block;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  text-align: center; }
+  .btn-cta:hover, .btn-cta:focus {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+  .btn-cta.white {
+    border-color: #fff;
+    color: #fff; }
+    .btn-cta.white:hover, .btn-cta.white:focus {
+      background-color: #fff;
+      color: #000; }
+
+.main-content .header {
+  position: relative; }
+  .main-content .header:before {
+    content: "";
+    background-color: #000;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0; }
+.main-content .top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px 0 40px;
+  position: relative;
+  z-index: 1; }
+.main-content .slider {
+  position: relative;
+  padding: 40px 40px 0 40px; }
+  .main-content .slider:before {
+    content: "";
+    width: 4px;
+    height: 240px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 2; }
+  .main-content .slider .owl-carousel .owl-item {
+    position: relative; }
+    .main-content .slider .owl-carousel .owl-item .text {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      max-width: 520px;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: #fff; }
+      .main-content .slider .owl-carousel .owl-item .text h1 {
+        font-size: 80px;
+        font-family: "Abril Fatface", cursive;
+        font-weight: normal;
+        line-height: 1;
+        margin-bottom: 30px; }
+      .main-content .slider .owl-carousel .owl-item .text p {
+        margin-bottom: 30px; }
+      .main-content .slider .owl-carousel .owl-item .text a {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2.8px;
+        display: inline-block;
+        border-bottom: 4px solid #fff;
+        padding: 15px 0; }
+    .main-content .slider .owl-carousel .owl-item img {
+      width: auto;
+      float: right; }
+  .main-content .slider .owl-dots {
+    position: absolute;
+    top: 28px;
+    right: 18px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .main-content .slider .owl-dots .owl-dot {
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.2);
+      margin-bottom: 5px;
+      transition: color 0.15s;
+      -webkit-transition: color 0.15s;
+      -moz-transition: color 0.15s;
+      -o-transition: color 0.15s;
+      outline: none; }
+      .main-content .slider .owl-dots .owl-dot.active {
+        color: #fff; }
+
+/********************************
+========== ABOUT US ===========
+********************************/
+.about-us {
+  padding: 130px 40px 200px;
+  margin-top: -100px;
+  position: relative; }
+  .about-us:after, .about-us:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 0; }
+  .about-us:before {
+    background-color: #000;
+    left: 0;
+    right: 50%;
+    bottom: 50%; }
+  .about-us:after {
+    background-color: #eee;
+    left: 50%;
+    right: 0;
+    bottom: 0; }
+  .about-us .row {
+    align-items: flex-end; }
+  .about-us > div {
+    z-index: 1;
+    position: relative; }
+  .about-us .socials {
+    margin-bottom: 40px; }
+    .about-us .socials ul {
+      display: flex;
+      align-items: center; }
+      .about-us .socials ul li + li {
+        margin-left: 23px; }
+      .about-us .socials ul li a {
+        color: rgba(255, 255, 255, 0.2); }
+        .about-us .socials ul li a:hover, .about-us .socials ul li a:focus {
+          color: #fff; }
+  .about-us .about-hotelG {
+    padding-left: 40px;
+    width: 50%; }
+    .about-us .about-hotelG .wrap {
+      max-width: 520px;
+      float: right;
+      clear: both; }
+    .about-us .about-hotelG .media {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 100px; }
+      .about-us .about-hotelG .media h2 {
+        position: absolute;
+        bottom: 80px;
+        right: 55px;
+        color: #fff;
+        font: normal 80px "Abril Fatface", cursive;
+        line-height: 1; }
+      .about-us .about-hotelG .media img {
+        max-width: 100%; }
+    .about-us .about-hotelG .text {
+      max-width: 291px;
+      float: right;
+      margin-right: 40px; }
+  .about-us .featureds {
+    padding: 0 40px;
+    width: 50%; }
+    .about-us .featureds .wrap {
+      max-width: 520px; }
+    .about-us .featureds .title {
+      font: normal 42px "Abril Fatface", cursive;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #000; }
+    .about-us .featureds .media {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #d7d7d7;
+      margin-bottom: 89px;
+      position: relative; }
+      .about-us .featureds .media .add-more {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 42px;
+        color: #d7d7d7; }
+      .about-us .featureds .media .item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .about-us .featureds .media .item img {
+          display: block;
+          max-width: 100%; }
+    .about-us .featureds .text {
+      max-width: 291px; }
+
+/********************************
+========== OUR HOTELS ===========
+********************************/
+.our-hotels {
+  margin-top: -100px;
+  margin-bottom: 200px; }
+  .our-hotels .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden; }
+  .our-hotels .block-title {
+    width: 20%;
+    z-index: 2; }
+    .our-hotels .block-title h3 {
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-family: "Abril Fatface", cursive;
+      font-size: 42px;
+      line-height: .95;
+      margin-bottom: 28px; }
+      .our-hotels .block-title h3 span {
+        white-space: pre-wrap;
+        display: inline-block;
+        max-width: 50%; }
+      .our-hotels .block-title h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 240px;
+        height: 4px;
+        background-color: #000; }
+    .our-hotels .block-title .navs {
+      margin-bottom: 62px; }
+      .our-hotels .block-title .navs button {
+        border: none;
+        padding: 0;
+        outline: none;
+        font-size: 0;
+        box-shadow: none;
+        width: 29px;
+        height: 20px; }
+        .our-hotels .block-title .navs button.prev {
+          background: url(./../images/icons/left-arrow.png) no-repeat center; }
+        .our-hotels .block-title .navs button.next {
+          background: url(./../images/icons/right-arrow.png) no-repeat center; }
+        .our-hotels .block-title .navs button + button {
+          margin-left: 20px; }
+    .our-hotels .block-title .category-name {
+      font-weight: bold;
+      letter-spacing: 2.8px;
+      color: rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      font-weight: bold;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      border-bottom: 4px solid rgba(0, 0, 0, 0.2); }
+  .our-hotels .products {
+    width: 80%;
+    z-index: 1; }
+    .our-hotels .products .item .media {
+      margin-bottom: 30px; }
+      .our-hotels .products .item .media img {
+        width: 100%; }
+    .our-hotels .products .item .desc h4 {
+      color: #000;
+      text-transform: uppercase; }
+    .our-hotels .products .item .desc p {
+      color: #b8b8b8;
+      margin-bottom: 15px; }
+    .our-hotels .products .item .desc a {
+      text-decoration: underline;
+      color: #000; }
+
+/********************************
+============= BLOGS ============
+********************************/
+.post .media {
+  position: relative;
+  text-align: right; }
+.post .content {
+  padding-top: 10px; }
+.post .datetime {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  line-height: 1;
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  margin-top: -4px; }
+  .post .datetime .month {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase; }
+  .post .datetime .day {
+    display: block;
+    font-size: 30px;
+    font-weight: bold; }
+.post .catname {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 8px; }
+.post .title {
+  text-transform: uppercase;
+  font-weight: bold; }
+  .post .title a {
+    color: #000; }
+.post .text {
+  color: #b8b8b8;
+  position: relative; }
+.post .desc {
+  margin-bottom: 17px; }
+.post .readmore {
+  text-decoration: underline;
+  color: #000; }
+
+.blogs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 300px; }
+  .blogs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: #000; }
+  .blogs .col {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    padding: 0; }
+  .blogs .featured .datetime {
+    padding: 30px;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
+    .blogs .featured .datetime .month {
+      font-size: 20px; }
+    .blogs .featured .datetime .day {
+      font-size: 50px; }
+  .blogs .featured .media img {
+    max-width: 100%; }
+  .blogs .featured .text {
+    max-width: 520px;
+    float: right;
+    color: #b6b6b6;
+    padding-right: 80px;
+    padding-top: 70px; }
+  .blogs .featured .title a {
+    color: #fff; }
+  .blogs .featured .readmore {
+    color: #fff;
+    margin-top: 30px;
+    display: inline-block; }
+  .blogs .g-talk .block-title {
+    max-width: 520px;
+    padding: 80px; }
+    .blogs .g-talk .block-title .title {
+      font: normal 80px "Abril Fatface", cursive;
+      line-height: 1;
+      margin-bottom: 28px; }
+    .blogs .g-talk .block-title .desc {
+      margin-bottom: 17px; }
+    .blogs .g-talk .block-title .readmore {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      letter-spacing: 2.8px;
+      display: inline-block;
+      padding-bottom: 10px;
+      border-bottom: 4px solid rgba(0, 0, 0, 0.2); }
+  .blogs .g-talk .posts {
+    background-color: #eee; }
+    .blogs .g-talk .posts .owl-carousel {
+      max-width: 520px;
+      padding: 80px 0 80px 80px; }
+      .blogs .g-talk .posts .owl-carousel .owl-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%); }
+        .blogs .g-talk .posts .owl-carousel .owl-nav button {
+          border: none;
+          padding: 0;
+          outline: none;
+          font-size: 0;
+          box-shadow: none;
+          width: 29px;
+          height: 20px; }
+          .blogs .g-talk .posts .owl-carousel .owl-nav button.owl-prev {
+            background: url(./../images/icons/left-arrow.png) no-repeat center; }
+          .blogs .g-talk .posts .owl-carousel .owl-nav button.owl-next {
+            background: url(./../images/icons/right-arrow.png) no-repeat center; }
+          .blogs .g-talk .posts .owl-carousel .owl-nav button + button {
+            margin-left: 20px; }
+
+.instagram {
+  margin-top: -250px;
+  margin-bottom: 130px; }
+  .instagram .block-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 60px; }
+    .instagram .block-title .title {
+      color: #fff;
+      position: relative;
+      padding-bottom: 15px;
+      font: normal 42px "Abril Fatface", cursive;
+      line-height: 1.9;
+      width: 80%; }
+      .instagram .block-title .title:after, .instagram .block-title .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block; }
+      .instagram .block-title .title:before {
+        width: -moz-calc(505px);
+        width: -webkit-calc(505px);
+        width: calc(505px);
+        height: 4px;
+        background-color: #fff;
+        z-index: 2; }
+      .instagram .block-title .title::after {
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+        opacity: .1;
+        z-index: 1; }
+    .instagram .block-title .sub-title {
+      width: 20%;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.2);
+      text-align: right;
+      -webkit-transform: translate(0, 50%);
+      -moz-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+      -o-transform: translate(0, 50%);
+      transform: translate(0, 50%); }
+  .instagram .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1; }
+    .instagram .gallery .item {
+      flex: 1; }
+      .instagram .gallery .item img {
+        width: 100%;
+        display: block; }
+    .instagram .gallery .add-more {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .instagram .gallery .add-more a {
+        color: #000;
+        font-size: 40px; }
+
+.newsletter {
+  margin-bottom: 50px; }
+  .newsletter .block-title {
+    margin-bottom: 20px; }
+    .newsletter .block-title h3 {
+      font: normal 42px "Abril Fatface", cursive;
+      line-height: 1.9; }
+    .newsletter .block-title:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #000; }
+  .newsletter .form {
+    width: 280px; }
+    .newsletter .form .input {
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      margin-bottom: 9px; }
+      .newsletter .form .input input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 15px 0; }
+      .newsletter .form .input button {
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: transparent; }
+    .newsletter .form .desc {
+      color: #b8b8b8; }
+
+/********************************
+============ FOOTER ============
+********************************/
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  footer .container .footer-menu ul li {
+    margin: 10px 0; }
+    footer .container .footer-menu ul li a {
+      text-decoration: underline;
+      color: #000; }
+  footer .container .copyright {
+    color: #b8b8b8; }
+
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/GOTHAMBOOK.TTF); }
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/Gotham-Bold.otf);
+  font-weight: bold; }
+.mega-menu {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding: 40px;
+  overflow: auto;
+  opacity: 0;
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s; }
+  .mega-menu.open {
+    opacity: 1;
+    -webkit-transform: translate(0, 0%);
+    -moz-transform: translate(0, 0%);
+    -ms-transform: translate(0, 0%);
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+  .mega-menu .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px; }
+  .mega-menu .toggle-menu__btn {
+    margin: 0 0 0 auto;
+    display: none; }
+  .mega-menu .book-button {
+    position: absolute;
+    top: 40px;
+    right: 40px; }
+  .mega-menu .col {
+    width: 33.3333333%; }
+    .mega-menu .col + .col {
+      border-left: 4px solid rgba(255, 255, 255, 0.2); }
+  .mega-menu .menu-title {
+    margin-bottom: 30px; }
+    .mega-menu .menu-title h3 {
+      font: normal 42px "Abril Fatface", cursive;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 4px; }
+    .mega-menu .menu-title .desc {
+      color: #6b6b6b; }
+  .mega-menu .body {
+    margin-bottom: 30px; }
+  .mega-menu .news {
+    padding-right: 40px; }
+    .mega-menu .news .body ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px; }
+      .mega-menu .news .body ul li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px; }
+        .mega-menu .news .body ul li img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px; }
+        .mega-menu .news .body ul li a {
+          color: #fff;
+          display: flex; }
+    .mega-menu .news .footer ul li a {
+      color: #fff;
+      line-height: 2.14;
+      letter-spacing: 2.8px;
+      color: #eee;
+      text-transform: uppercase; }
+  .mega-menu .locations {
+    padding-right: 40px;
+    padding-left: 40px; }
+    .mega-menu .locations ul {
+      display: flex;
+      flex-wrap: wrap; }
+      .mega-menu .locations ul li {
+        width: 50%;
+        margin: 5px 0; }
+        .mega-menu .locations ul li a {
+          color: #eee;
+          line-height: 2.14;
+          letter-spacing: 2.8px;
+          font-weight: bold;
+          text-transform: uppercase; }
+  .mega-menu .menu-blogs {
+    padding-left: 40px; }
+    .mega-menu .menu-blogs .post .catname {
+      color: #6b6b6b; }
+    .mega-menu .menu-blogs .post .title a {
+      text-transform: initial;
+      color: #fff; }
+    .mega-menu .menu-blogs .readmore {
+      line-height: 2.14;
+      letter-spacing: 2.8px;
+      color: #eee;
+      text-transform: uppercase;
+      display: inline-block;
+      padding-bottom: 10px;
+      border-bottom: 4px solid #eee; }
+
+@media screen and (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden; }
+    body.menu-open .wrapper {
+      -webkit-transform: translate(100%, 0);
+      -moz-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      -o-transform: translate(100%, 0);
+      transform: translate(100%, 0); }
+
+  .mega-menu {
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transform: translate(-100%, 0); }
+    .mega-menu.open {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0); }
+    .mega-menu .col {
+      width: 100%;
+      flex: unset;
+      margin-bottom: 25px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      .mega-menu .col + .col {
+        border-left: none; }
+    .mega-menu .toggle-menu__btn {
+      display: block; }
+    .mega-menu .book-button {
+      position: relative;
+      top: 0;
+      right: 0; }
+      .mega-menu .book-button .btn-cta {
+        width: 100%;
+        background-color: #fff;
+        color: #000; }
+        .mega-menu .book-button .btn-cta:hover, .mega-menu .book-button .btn-cta:focus {
+          background: #000;
+          color: #fff; }
+    .mega-menu .menu-title {
+      border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 10px; }
+      .mega-menu .menu-title h3 {
+        font-size: 20px; }
+      .mega-menu .menu-title .desc {
+        font-size: 12px; }
+    .mega-menu .menu-content {
+      display: none;
+      width: 100%; } }
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/GOTHAMBOOK.TTF); }
+@font-face {
+  font-family: "Gotham";
+  src: url(./../fonts/Gotham-Bold.otf);
+  font-weight: bold; }
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1040px; } }
+@media screen and (max-width: 991px) {
+  .main-content .slider .owl-carousel .owl-item .text {
+    left: 0;
+    right: auto;
+    padding-left: 40px; }
+
+  .about-us .about-hotelG .media h2 {
+    font-size: 30px;
+    right: 16%; }
+
+  .blogs .featured .text {
+    padding-left: 40px; } }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-right: 60px;
+    padding-bottom: 40px; }
+
+  .container {
+    padding-right: 40px;
+    padding-left: 40px; }
+
+  .main-content .header {
+    background-color: #000;
+    overflow: hidden; }
+    .main-content .header:before {
+      display: none; }
+  .main-content .top-header {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 10px; }
+    .main-content .top-header .btn-book {
+      display: none; }
+  .main-content .slider {
+    padding: 0 0 0 24px;
+    margin-bottom: 30px; }
+    .main-content .slider:before {
+      left: 20px; }
+    .main-content .slider .owl-carousel .owl-item img {
+      width: 100%;
+      float: none;
+      margin-bottom: 15px; }
+    .main-content .slider .owl-carousel .owl-item .text {
+      position: relative;
+      top: 0;
+      right: 0;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0);
+      padding-right: 20px;
+      padding-left: 20px; }
+      .main-content .slider .owl-carousel .owl-item .text h1 {
+        font-size: 30px; }
+    .main-content .slider .owl-carousel .owl-dots {
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-start;
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+      padding-right: 20px;
+      padding-left: 20px; }
+      .main-content .slider .owl-carousel .owl-dots .owl-dot {
+        margin-bottom: 0; }
+    .main-content .slider .owl-carousel .owl-nav {
+      margin-top: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translate(0, 50%);
+      -moz-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+      -o-transform: translate(0, 50%);
+      transform: translate(0, 50%); }
+      .main-content .slider .owl-carousel .owl-nav .owl-next {
+        background: url(./../images/icons/white-right-arrow.png) no-repeat;
+        width: 29px;
+        height: 20px;
+        margin: 0 40px 0 0; }
+        .main-content .slider .owl-carousel .owl-nav .owl-next span {
+          display: none; }
+      .main-content .slider .owl-carousel .owl-nav .owl-prev {
+        display: none; }
+
+  .quick-menu {
+    width: 60px;
+    background-color: #fff;
+    border-right: 4px solid #000; }
+    .quick-menu .toggle-menu__btn span {
+      background-color: #000; }
+    .quick-menu .lang ul li a {
+      color: #b6b6b6;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0; }
+    .quick-menu .lang ul li.active a {
+      color: #000;
+      padding: 0; }
+
+  .menu-open .quick-menu {
+    background-color: #000; }
+
+  .about-us {
+    margin-top: 0;
+    padding: 0; }
+    .about-us:before {
+      right: 0;
+      bottom: 80%; }
+    .about-us::after {
+      display: none; }
+    .about-us .row {
+      display: block; }
+    .about-us .socials {
+      display: none; }
+    .about-us .about-hotelG, .about-us .featureds {
+      max-width: unset;
+      width: unset; }
+    .about-us .about-hotelG {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 40px; }
+      .about-us .about-hotelG .wrap {
+        float: none; }
+      .about-us .about-hotelG .media {
+        margin-bottom: 20px;
+        margin-right: -40px; }
+        .about-us .about-hotelG .media h2 {
+          font-size: 30px;
+          line-height: 30px;
+          right: 16%; }
+        .about-us .about-hotelG .media img + img {
+          margin-top: 0; }
+      .about-us .about-hotelG .text {
+        float: none;
+        max-width: unset; }
+    .about-us .featureds {
+      position: relative;
+      padding: 0 15px 250px; }
+      .about-us .featureds:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        background-color: #eee;
+        z-index: 0;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        width: 100vw; }
+      .about-us .featureds > div {
+        position: relative;
+        z-index: 1; }
+      .about-us .featureds .media {
+        width: 100%;
+        margin-bottom: 20px; }
+      .about-us .featureds .title {
+        font-size: 20px;
+        padding-top: 40px; }
+      .about-us .featureds .text {
+        max-width: unset; }
+
+  .blogs {
+    padding-bottom: 0; }
+    .blogs::before {
+      background-color: unset; }
+    .blogs .col {
+      width: 100%; }
+      .blogs .col:first-child {
+        display: none; }
+    .blogs .g-talk .block-title {
+      padding: 0 40px;
+      max-width: 540px;
+      margin: 0 auto 30px; }
+    .blogs .g-talk .posts {
+      background-color: #000;
+      color: #fff; }
+      .blogs .g-talk .posts .owl-carousel {
+        max-width: unset;
+        padding: 0; }
+    .blogs .g-talk .post .catname {
+      color: #b6b6b6;
+      font-size: 12px; }
+    .blogs .g-talk .post .title a {
+      color: #fff; }
+    .blogs .g-talk .post .text {
+      padding-left: 40px;
+      padding-right: 40px;
+      max-width: 540px;
+      margin: auto; }
+    .blogs .g-talk .post .datetime {
+      position: relative;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+    .blogs .g-talk .post .readmore {
+      display: inline-block; }
+
+  .instagram {
+    margin: 0;
+    background: #000; }
+    .instagram .container {
+      padding-top: 40px;
+      padding-bottom: 40px; }
+    .instagram .block-title {
+      color: #fff;
+      padding-bottom: 10px;
+      border-bottom: 4px solid #fff;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .instagram .block-title .title {
+        font-size: 20px;
+        line-height: 1;
+        padding-bottom: 0; }
+        .instagram .block-title .title:before, .instagram .block-title .title::after {
+          display: none; }
+      .instagram .block-title .sub-title {
+        width: unset;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: 12px;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0); }
+    .instagram .gallery .item {
+      width: 50%;
+      flex: unset; }
+      .instagram .gallery .item:nth-child(4) {
+        display: none; }
+    .instagram .gallery .add-more a {
+      color: #fff; }
+
+  .our-hotels {
+    margin-top: -200px;
+    margin-bottom: 100px; }
+    .our-hotels .block-title, .our-hotels .products {
+      width: 100%; }
+    .our-hotels .block-title .navs, .our-hotels .block-title .category-name {
+      display: none; }
+    .our-hotels .block-title h3 {
+      font-size: 20px; }
+      .our-hotels .block-title h3 span {
+        max-width: unset; }
+
+  .newsletter {
+    margin-bottom: 40px; }
+
+  footer .container {
+    display: block; }
+  footer .footer-menu {
+    margin-bottom: 20px; } }

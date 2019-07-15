@@ -1,0 +1,356 @@
+@import './variables';
+@import './mixins';
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1040px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .main-content {
+        .slider {
+            .owl-carousel {
+                .owl-item {
+                    .text {
+                        left: 0;
+                        right: auto;
+                        padding-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .about-us {
+        .about-hotelG {
+            .media {
+                h2 {
+                    font-size: 30px;
+                    right: 16%;
+                }
+            }
+        }
+    }
+    .blogs {
+        .featured {
+            .text {
+                padding-left: 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding-right: 60px;
+        padding-bottom: 40px;
+    }
+    .container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .main-content {
+        .header {
+            background-color: #000;
+            overflow: hidden;
+            &:before {
+                display: none
+            }
+
+        }
+        .top-header {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            .btn-book {
+                display: none;
+            }
+        }
+        .slider {
+            padding: 0 0 0 24px;
+            margin-bottom: 30px;
+            &:before {
+                left: 20px;
+            }
+            .owl-carousel {
+                .owl-item {
+                    img {
+                        width: 100%;
+                        float: none;
+                        margin-bottom: 15px;
+                    }
+                    .text {
+                        position: relative;
+                        top: 0;
+                        right: 0;
+                        @include translate(0, 0);
+                        padding-right: 20px;
+                        padding-left: 20px;
+                        h1 {
+                            font-size: 30px
+                        }
+                    }
+                }
+                .owl-dots {
+                    position: relative;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    top: 0;
+                    right: 0;
+                    margin-top: 30px;
+                    padding-right: 20px;
+                    padding-left: 20px;
+                    .owl-dot {
+                        margin-bottom: 0;
+                    }
+                }
+                .owl-nav {
+                    margin-top: 0;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    @include translate(0, 50%);
+                    .owl-next {
+                        background: url(./../images/icons/white-right-arrow.png) no-repeat;
+                        @include size(29px, 20px);
+                        margin: 0 40px 0 0;
+                        span {
+                            display: none;
+                        }
+                    }
+                    .owl-prev {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .quick-menu {
+        width: 60px;
+        background-color: #fff;
+        border-right: 4px solid #000;
+        .toggle-menu__btn {
+            span {
+                background-color: #000;
+            }
+        }
+        .lang {
+            ul {
+                li {
+                    a {
+                        color: #b6b6b6;
+                        border: none;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                    &.active {
+                        a {
+                            color: #000;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-open {
+        .quick-menu {
+            background-color: #000;
+        }
+    }
+    .about-us {
+        margin-top: 0;
+        padding: 0;
+        &:before {
+            right: 0;
+            bottom: 80%;
+        }
+        &::after {
+            display: none;
+        }
+        .row {
+            display: block;
+        }
+        .socials {
+            display: none;
+        }
+        .about-hotelG, .featureds {
+            max-width: unset;
+            width: unset;
+        }
+        .about-hotelG {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 40px;
+            .wrap {
+                float: none
+            }
+            .media {
+                margin-bottom: 20px;
+                margin-right: -40px;
+                h2 {
+                    font-size: 30px;
+                    line-height: 30px;
+                    right: 16%;
+                }
+                img {
+                    + img {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .text {
+                float: none;
+                max-width: unset;
+            }
+        }
+        .featureds {
+            position: relative;
+            padding: 0 15px 250px;
+            &:after {
+                content: "";
+                @include position(absolute, 0, auto, 0, 50%);
+                background-color: #eee;
+                z-index: 0;
+                @include translate(-50%, 0);
+                width: 100vw;
+            }
+            >div {
+                position: relative;
+                z-index: 1;
+            }
+            .media {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .title {
+                font-size: 20px;
+                padding-top: 40px;
+            }
+            .text {
+                max-width: unset;
+            }
+        }
+    }
+    .blogs {
+        padding-bottom: 0;
+        &::before {
+            background-color: unset;
+        }
+        .col {
+            width: 100%;
+            &:first-child {
+                display: none;
+            }
+        }
+        .g-talk {
+            .block-title {
+                padding: 0 40px;
+                max-width: 540px;
+                margin: 0 auto 30px;
+            }
+            .posts {
+                background-color: #000;
+                color: #fff;
+                .owl-carousel {
+                    max-width: unset;
+                    padding: 0;
+                }
+            }
+            .post {
+                .catname {
+                    color: #b6b6b6;
+                    font-size: $baseFontSize - 2;
+                }
+                .title {
+                    a {
+                        color: #fff;
+                    }
+                }
+                .text {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    max-width: 540px;
+                    margin: auto
+                }
+                .datetime {
+                    position: relative;
+                    @include translate(0, -50%);
+                }
+                .readmore {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .instagram {
+        margin: 0;
+        background: #000;
+        .container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .block-title {
+            color: #fff;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #fff;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .title {
+                font-size: 20px;
+                line-height: 1;
+                padding-bottom: 0;
+                &:before , &::after {
+                    display: none;
+                }
+            }
+            .sub-title {
+                width: unset;
+                color: rgba($color: #ffffff, $alpha: .2);
+                font-size: 12px;
+                @include translate(0,0);
+            }
+        }
+        .gallery {
+            .item {
+                width: 50%;
+                flex: unset;
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+            .add-more {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .our-hotels {
+        margin-top: -200px;
+        margin-bottom: 100px;
+        .block-title, .products {
+            width: 100%;
+        }
+        .block-title {
+            .navs, .category-name {
+                display: none;
+            }
+            h3 {
+                font-size: 20px;
+                span {
+                    max-width: unset;
+                }
+            }
+        }
+    }
+    .newsletter {
+        margin-bottom: 40px;
+    }
+    footer {
+        .container {
+            display: block;
+        }
+        .footer-menu {
+            margin-bottom: 20px;
+        }
+    }
+}
